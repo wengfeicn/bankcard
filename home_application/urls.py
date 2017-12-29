@@ -10,10 +10,13 @@ See the License for the specific language governing permissions and limitations 
 """
 
 from django.conf.urls import patterns
+from . import fileupload
 
 urlpatterns = patterns(
     'home_application.views',
     (r'^$', 'home'),
     (r'^dev-guide/$', 'dev_guide'),
     (r'^contactus/$', 'contactus'),
+    (r'^upload/file', fileupload.file),
+    (r'^upload/', fileupload.index),
 )
